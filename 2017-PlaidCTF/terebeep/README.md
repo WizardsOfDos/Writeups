@@ -6,6 +6,7 @@ SSTV
 ### Setp 1: Demodulation
 After listening to the wav file, we viewed the spectrogram of the signal in Inspectrum.
 The image shows the beginning of the .wav File.
+
 ![Alternativtext](spectrogram.jpg "Raw Spectrogram")
 
 It seems, that there is one carrier of non constant frequency, what would be an indicator for Frequency Modulation.
@@ -21,7 +22,7 @@ Even though this seems to be no digital modulation we know.
 
 ![Alternativtext](demod.jpg "Demodulated Signal")
 
-### Setp 2: Convert to in Image
+### Setp 2: Convert to an Image
 We noticed periodic dips in the signal encapsulating a pattern repeating 3 times.
 At some point we cam up with the idea, that these dips (sounds like 'clicks' in the original signal) could be a clock signal for the beginning of a row of an image.
 We tried to split the signal into individual rows and visualize them using the following script.
@@ -51,7 +52,9 @@ while True:
 ```
 
 By experimenting with the parameters, an image is visible with separated RGB channels \o/
+
 ![Alternativtext](flag1.jpg "Image")
 
 By zooming in we can barely read the Flag: PCTF{Did_You_Know_the_ISS_Sends_Slow_Scan_TV_Images?_506063fd}
+
 ![Alternativtext](flag2.jpg "Flag")
