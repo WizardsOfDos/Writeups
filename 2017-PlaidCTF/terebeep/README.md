@@ -1,4 +1,4 @@
-### Solution in one Word
+### Short Description
 SSTV
 
 ### Setp 1: Demodulation
