@@ -1,7 +1,7 @@
 # Terebeep
 
 ### Short Description
-SSTV
+High resolution SSTV
 
 ### Setp 1: Demodulation
 After listening to the wav file, we viewed the spectrogram of the signal in Inspectrum.
@@ -31,22 +31,23 @@ We tried to split the signal into individual rows and visualize them using the f
 from scipy.io.wavfile import read
 import numpy as np
 import pylab as plt
+import top_block as tb
 
+tb.main()
 plt.ion()
 plt.set_cmap("gray")
 a = read("fmdemod.wav")
 x = map(float, a[1])
 
 while True:
-    #Rowlen: 41109
-    rowlen = int(raw_input("Rowlen: "))
-    i = int(raw_input("Offset: "))
+    rowlen = 41109#int(raw_input("Rowlen: "))
+    i = 10000#int(raw_input("Offset: "))
     img = []
     while i+rowlen < len(x):
         img += [x[i:i+rowlen]]
         i += rowlen
-    img = np.array(img)
 
+    img = np.array(img)
     plt.imshow(img, interpolation='bilinear', aspect='auto')
     plt.draw()
 ```
@@ -59,3 +60,8 @@ By zooming in we can barely read the Flag: PCTF{Did_You_Know_the_ISS_Sends_Slow_
 
 ![Alternativtext](flag2.jpg "Flag")
 
+# Files
+- [Original WAV](terebeep.wav)
+- [GNURadio flowgraph](demod.grc)
+- [Compiled top block](top_block.py)
+- [Toplevel script](plot.py)

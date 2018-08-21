@@ -171,3 +171,8 @@ str:
 ```
 
 And finally recover the flag: ASIS{526eb5559eea12d1e965fe497b4abb0a308f2086}
+
+# Files
+- [Exploit](exploit.py)
+- [Binary](myblog)
+- [Hopper file](myblog.hop)
