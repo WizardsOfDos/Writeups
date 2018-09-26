@@ -1,6 +1,8 @@
 # Collusion (Crypto, 500)
 Author: fxrh
 
+**Note: As LaTex (aka those math symbols) do not work on github, go [here](https://md.darmstadt.ccc.de/collusion) for a version with proper math symbols**
+
 Collusion was a Crypto-Challenge at the Qualification Round of CSAW CTF 2018.
 
 We were given five files:
